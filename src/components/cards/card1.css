@@ -1,0 +1,37 @@
+.card-style1{
+    padding: 2px 2px 20px 2px;
+    max-width:190px;
+
+    margin: auto;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+justify-content: center;
+align-items: center;
+}
+.card-style1 .img-style{
+    max-width:100%;
+    height: 184.68px;
+  
+}
+.card-style1:hover{
+    background-color: rgb(224, 216, 216);
+}
+.card-style1 .heading-style{
+    font-size: 24px;
+    margin-top: 5px;
+
+}
+.card-style1 .content{
+   
+        width: 100%;
+        padding: 0 27px;
+        display: flex;
+        flex-direction: column;
+        
+    
+}
+.card-style1 .content button{
+    margin: 4px 0;
+}

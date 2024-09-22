@@ -1,0 +1,15 @@
+
+.home-style{
+    padding: 20px;
+    margin-top: 90px;
+    margin-bottom: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 220px;
+}
+.content-style{
+    padding: 10px;
+display: flex;
+
+}

@@ -1,0 +1,136 @@
+
+.header{
+ 
+  /* border-top-left-radius: 20px;
+  border-top-right-radius: 20px; */
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+     align-items: center;
+     justify-content: space-between;
+     height: 90px;
+     background-color: rgb(53, 74, 95);
+     padding: 10px 20px;
+}
+.nav-icon{
+    cursor: pointer;
+
+}
+.nav-img{
+   
+    width: 305px;
+}
+.nav-links{cursor: pointer;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    font-family: sans-serif;}
+
+.language-dropdown {
+    margin-right: 10px;
+    /* width: 100%; */
+    height: 100%;
+      position: relative; /* لتحديد الموقع بالنسبة للزر */
+      display: inline-block; /* يجعل الصندوق في صف واحد */
+    }
+    .dropdown-toggle::after {
+      content: none !important; /* إزالة السهم الافتراضي */
+    }
+    .dropdown-toggle {
+      width: 100%;
+      height: 100%;
+      background-color: rgb(53, 74, 95);
+      font-size: 19px;
+      justify-content: space-between;
+      display: flex;
+      align-items: center;
+  
+      color: white; /* لون النص في الزر */
+      padding: 0px 7px; /* الحشو حول النص داخل الزر */
+      border: none; /* إزالة حدود الزر */
+      cursor: pointer; /* مؤشر الفأرة يتحول إلى يد عند التمرير */
+ 
+      /* border-radius: 5px; حواف دائرية للزر */
+      /* box-shadow: 0px 2px 4px rgba(0,0,0,0.1); ظل خفيف للزر */
+    }
+    a{
+        text-decoration: none;
+    }
+    .dropdown-toggle:hover{
+  
+    
+    }
+    
+    .dropdown-menus{
+    
+      display: block; /* القائمة غير مرئية في البداية */
+      position: absolute; /* لتكون تحت الزر مباشرة */
+     /* لون خلفية القائمة */
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2); /* ظل للقائمة */
+      z-index: 200; /* للتأكد من أن القائمة تظهر فوق العناصر الأخرى */
+      min-width: 160px; /* عرض الحد الأدنى للقائمة */
+      margin: 0; /* إزالة الهوامش */
+     
+      list-style: none; /* إزالة نقاط القائمة */
+      border-radius: 5px; /* حواف دائرية للقائمة */
+      right: 0;
+      background: black;
+    text-align: center;
+    padding: 24px 5px;
+    font-size: 18px;
+    }
+    
+    .dropdown-menu li {
+        margin: 2px;
+      padding: 10px 20px; /* حشو حول كل عنصر في القائمة */
+      cursor: pointer; /* مؤشر الفأرة يتحول إلى يد عند التمرير */
+    }
+    
+    .dropdown-menu li a {
+      text-decoration: none; /* إزالة التسطير عن الروابط */
+      color: #333; /* لون النص في الروابط */
+      display: block; /* يجعل كل عنصر يأخذ كامل العرض */
+    }
+    
+    .dropdown-menu li:hover {
+      background-color: #f0f0f0; /* لون الخلفية عند التمرير فوق العنصر */
+    }
+    .arrow {
+      display: inline-block;
+      margin-left: 10px;
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      padding: 3px;
+      transform: rotate(45deg); /* السهم يشير لأسفل */
+      transition: transform 0.3s;
+    }
+    .arrow2{
+     
+      margin-left: 10px;
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      padding: 3px;
+      transform: rotate(45deg); /* السهم يشير لأسفل */
+      transition: transform 0.3s;
+    }
+    
+    .arrow.up {
+      transform: rotate(-135deg); /* السهم يشير لأعلى */
+    }
+    
+    .arrow.down {
+      transform: rotate(45deg); /* السهم يشير لأسفل */
+    }
+    ul {
+        display: block;  
+        list-style-type: none; /* لإزالة النقاط */
+        margin-block-start: 0; /* إلغاء الهامش العلوي */
+        margin-block-end: 0; /* إلغاء الهامش السفلي */
+        margin-inline-start: 0; /* إلغاء الهامش من الجانب الأيسر */
+        margin-inline-end: 0; /* إلغاء الهامش من الجانب الأيمن */
+        padding-inline-start: 0; /* إلغاء المسافة البادئة من الجانب الأيسر */
+        unicode-bidi: normal; /* إعادة تعيين سلوك اتجاه النص */
+      }

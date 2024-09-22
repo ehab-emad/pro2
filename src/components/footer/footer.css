@@ -1,0 +1,20 @@
+.bottom-bar{
+  background-color: rgb(53, 74, 95);
+  position: fixed;
+  bottom: 0;
+  right: 0;
+/*   
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px; */
+  z-index: 100;
+  height: 50px;
+  width: 100%;
+  padding: 10px;
+}
+a{text-decoration: none;}
+.bottom-bar p{
+    color: white;
+    font-size: 13px;
+    margin: 0;
+ 
+}

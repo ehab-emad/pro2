@@ -37,7 +37,7 @@ setIsOpen(false)
    <div className="header ">
     <div className="left">
     
-   <a className="" onClick={() => openNav()}>
+   <a className="" >
        <img
          src={m1}
          alt="Menu"

@@ -66,9 +66,9 @@ body {
 .zoom-controls {
   z-index: 120;
 gap: 30px;
-  position: absolute;
-  bottom: 60px;
-  right: 20px;
+  position: fixed;
+  top: 130px;
+  left: 20px;
   display: flex;
   /* flex-direction: column; */
 }

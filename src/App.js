@@ -6,7 +6,7 @@ import { Footer } from './components/footer/footer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Index from './pages/index';
 import CytoscapeGraph from './components/pc';
-import CytoscapeGraph1 from './components/test';
+import CytoscapeGraph1 from './pages/test';
 // import Test from './components/test';
 
 function App() {
@@ -20,12 +20,12 @@ function App() {
     <Routes>
       <Route path='/' element={ <Home/>}/>
       <Route path='/index' element={ <Index/>}/>
-      {/* <Route path='/Diagram' element={ <CytoscapeGraph/>}/> */}
+      <Route path='/Diagram' element={ <CytoscapeGraph1/>}/>
     </Routes>
     
       
    <Footer />
-   <CytoscapeGraph1/>
+ 
     {/* <Test/> */}
     </BrowserRouter>
   

@@ -6,8 +6,10 @@ import { GoQuestion } from "react-icons/go";
 import { MdAccountCircle } from "react-icons/md";
 import { TiDocumentText } from "react-icons/ti";
 import { FaTicketAlt } from "react-icons/fa";
+import { Link } from "react-router-dom";
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [remove, setremove] = useState(false);
   const [isOpened, setIsOpened] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState('Help');
   const [selectedmoney, setSelectedmoney] = useState('DDDD');
@@ -38,12 +40,12 @@ setIsOpen(false)
     <div className="left">
     
    <a className="" >
-       <img
+     <Link to={"/"} onClick={()=>setremove(false)}>  <img
          src={m1}
          alt="Menu"
          className="nav-icon"
          style={{ height: "50px" }}
-       />
+       /></Link>
      </a>
      <a className="" href="/home">
      <img
@@ -53,6 +55,7 @@ setIsOpen(false)
      />
    </a>
      <a className="nav-links">Add new project</a>
+     <Link to={"/Diagram"} className={`${remove? "d-none":"btn btn-success mx-4"} `} onClick={()=>setremove(true)} >Diagram</Link>
     </div>
     <div className="right">
     <div className="language-dropdown">

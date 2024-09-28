@@ -22,7 +22,7 @@ const ALLworkflow = () => {
       <Cardworkflow item={i}/>
       
       
-      {console.log(i)}
+      {/* {console.log(i)} */}
       </>)
     })}
     

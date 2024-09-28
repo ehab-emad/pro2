@@ -3,12 +3,13 @@ import cytoscape from "cytoscape";
 import cxtmenu from "cytoscape-cxtmenu";
 import dagre from "cytoscape-dagre";
 import jsonData from '../db1.json'; // تأكد من أن البيانات هنا
+import { useParams } from "react-router-dom";
 
 // دمج الإضافات مع cytoscape
 cytoscape.use(cxtmenu);
 cytoscape.use(dagre);
 
-const CytoscapeGraph1 = () => {
+const CytoscapeGraph1 = () => { const param=useParams()
   const [cyInstance, setCyInstance] = useState(null);
   const [workflowData, setWorkflowData] = useState(null);
 
@@ -183,6 +184,7 @@ const CytoscapeGraph1 = () => {
     <div className="container-fluid" id="objects-container" style={{ position: "relative" }}>
       <div id="cy" style={{ width: '100%', height: '800px' }}></div>
       <div className="zoom-controls">
+        {console.log(param)}
         <button onClick={() => cyInstance && cyInstance.zoom(cyInstance.zoom() * 1.1)}>+</button>
         <button onClick={() => cyInstance && cyInstance.zoom(cyInstance.zoom() * 0.9)}>-</button>
       </div>

@@ -5,9 +5,9 @@ import axios from 'axios';
 import Workflow from '../pages/workflow';
 
 // إنشاء thunk لجلب البيانات باستخدام GET request
-export const fetchData = createAsyncThunk('data/fetchData', async () => {
-  const response = await axios.get("http://127.0.0.1:8000/api/data1/"); // يفترض أن data.json موجود في public
-  const data=response.data.data.objs_workflow
+export const fetchData3 = createAsyncThunk('data/fetchData', async () => {
+  const response = await axios.get("http://127.0.0.1:8000/api/data2/"); // يفترض أن data.json موجود في public
+  const data=response.data.data.obj_workflow.sessions
   
   return data;
   
@@ -15,10 +15,10 @@ export const fetchData = createAsyncThunk('data/fetchData', async () => {
 
 });
 
-export const dataSlice = createSlice({
+export const sessiondata = createSlice({
   name: 'data',
   initialState: {
-    ALLworkflow: [],
+    ww: [],
     loading: false,
     error: null,
   },
@@ -30,15 +30,15 @@ export const dataSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
-      .addCase(fetchData.pending, (state) => {
+      .addCase(fetchData3.pending, (state) => {
         state.loading = true;
         state.error = null;
       })
-      .addCase(fetchData.fulfilled, (state, action) => {
+      .addCase(fetchData3.fulfilled, (state, action) => {
         state.loading = false;
-        state.ALLworkflow = action.payload;
+        state.ww = action.payload;
       })
-      .addCase(fetchData.rejected, (state, action) => {
+      .addCase(fetchData3.rejected, (state, action) => {
         state.loading = false;
         state.error = action.error.message;
       });
@@ -46,4 +46,4 @@ export const dataSlice = createSlice({
 });
 
 // تأكد من تصدير الـ reducer بشكل صحيح
-export default dataSlice.reducer;
+export default sessiondata.reducer;

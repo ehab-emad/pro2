@@ -47,7 +47,7 @@ setIsOpen(false)
          style={{ height: "50px" }}
        /></Link>
      </a>
-     <a className="" href="/home">
+     <a className="" href="/">
      <img
        src={m2}
        alt="Home"
@@ -55,7 +55,6 @@ setIsOpen(false)
      />
    </a>
      <a className="nav-links">Add new project</a>
-     <Link to={"/:id"} className={`${remove? "d-none":"btn btn-success mx-4"} `} onClick={()=>setremove(true)} >Diagram</Link>
     </div>
     <div className="right">
     <div className="language-dropdown">

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Row } from 'react-bootstrap'
 import Card1 from '../../components/cards/card1'
 import m1 from '../../asssets/Workflow_Icon.png'
@@ -9,21 +9,23 @@ import m6 from '../../asssets/EDAG_icon.png'
 import Cardproject from '../../components/cardproject/Card2'
 import Card3 from '../../components/card3'
 import '../home/home.css'
+import { useDispatch, useSelector } from 'react-redux'
+import { fetchData3 } from '../../redux/fetchsession'
 
-const Index = () => {
+const Index = () => { 
+  
   return (
     <div className='home-style '>
         <div className='  content-style'>
 <Row >
 {/* <Card1 title={"Blot"} desc={"Create,edit and share bolt cases"} img={m4} style={value}/> */}
-        <Card1 title={"Blot"} desc={"Create,edit and share bolt cases"} img={m1} />
+       <Card1  path={"/allworkflow"} title={"Blot"} desc={"Create,edit and share bolt cases"} img={m1} />
    
-        <Card1 title={"Blot"} desc={"Create,edit and share bolt cases"} img={m2}/>
-        <Card1 title={"Blot"} desc={"Create,edit and share bolt cases"} img={m2}/>
+        <Card1 path={"/allworkflow"} title={"Blot"} desc={"Create,edit and share bolt cases"} img={m2}/>
+        <Card1  path={"/allworkflow"} title={"Blot"} desc={"Create,edit and share bolt cases"} img={m2}/>
     
-        <Card1 title={"Blot"} desc={"Create,edit and share bolt cases"} img={m3}/>
+        <Card1  path={"/allworkflow"} title={"Blot"} desc={"Create,edit and share bolt cases"} img={m3}/>
    
-    
      
     
         

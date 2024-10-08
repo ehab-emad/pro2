@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './workflow.css'
-import Cardworkflow from '../../components/cardworkflow'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { fetchData } from '../../redux/fetchdata'
+import Allworkflow from '../../components/Cardallworkflow'
+import { fetchData3 } from '../../redux/fetchsession'
 const ALLworkflow = () => {
  const data=useSelector((item)=>item.data.ALLworkflow)
+ const dispatch=useDispatch()
+  useEffect(()=>{
+    dispatch(fetchData())
 
+  },[])
   return (
    <div style={{margin:"100px 0 60px 0"}}>
      <div className=' workflow'>
@@ -13,16 +19,14 @@ const ALLworkflow = () => {
 
 
 
-
-
+{console.log(data)}
         
     </div>
     {data.map((i)=>{
       return(<>
-      <Cardworkflow item={i}/>
+      <Allworkflow item={i}/>
       
-      
-      {/* {console.log(i)} */}
+
       </>)
     })}
     

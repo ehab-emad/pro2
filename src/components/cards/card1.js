@@ -3,7 +3,7 @@ import './card1.css'
 import { Col } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
-const Card1 = ({img,title,desc,style}) => {
+const Card1 = ({img,title,desc,style,path}) => {
   return (
     <Col sm={"4"}
     xs={"4"}
@@ -16,7 +16,7 @@ const Card1 = ({img,title,desc,style}) => {
 <div style={{padding:"0 24px"}}><h2 className='heading-style'>{title}</h2>
 <p>{desc}</p></div>
 <div className='content'>
-<Link to={'/index'}><button style={{color:"#333",width:"100%"}} className='btn btn-success'>Start</button></Link>
+<Link to={path}><button style={{color:"#333",width:"100%"}} className='btn btn-success'>Start</button></Link>
 <button className='btn btn-info' style={{color:"white"}}>Info</button>
 
 </div>
